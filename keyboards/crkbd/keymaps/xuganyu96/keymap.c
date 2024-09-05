@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define S_CTL LCTL_T(KC_S)
 #define D_OPT LOPT_T(KC_D)
 #define F_CMD LCMD_T(KC_F)
+#define HYPER_G ALL_T(KC_G)
 #define J_CMD RCMD_T(KC_J)
 #define K_OPT ROPT_T(KC_K)
 #define L_CTL RCTL_T(KC_L)
@@ -35,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSLS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_BSPC,    KC_A,   S_CTL,   D_OPT,   F_CMD,    KC_G,                         KC_H,   J_CMD,   K_OPT,   L_CTL, KC_SCLN, KC_QUOT,
+      KC_BSPC,    KC_A,   S_CTL,   D_OPT,   F_CMD, HYPER_G,                         KC_H,   J_CMD,   K_OPT,   L_CTL, KC_SCLN, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
