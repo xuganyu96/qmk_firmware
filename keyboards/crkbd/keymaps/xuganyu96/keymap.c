@@ -26,6 +26,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define L_CTL RCTL_T(KC_L)
 #define CMD_4 RCMD_T(KC_4)
 #define CTL_6 RCTL_T(KC_6)
+#define VOL_UP KC_KB_VOLUME_UP
+#define VOL_DOWN KC_KB_VOLUME_DOWN
+#define MUTE KC_KB_MUTE
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
@@ -55,11 +58,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, MS_WHLU, MS_BTN1,   MS_UP, MS_BTN2, XXXXXXX,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
+      XXXXXXX, MS_WHLU, MS_BTN1,   MS_UP, MS_BTN2, XXXXXXX,                      XXXXXXX,VOL_DOWN,  VOL_UP,    MUTE, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_GRV,
+      XXXXXXX, MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LSFT, KC_LCTL, KC_LOPT, KC_LCMD, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+      XXXXXXX, KC_LSFT, KC_LCTL, KC_LOPT, KC_LCMD, XXXXXXX,                      XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX,   TO(0),   TO(3),    XXXXXXX, XXXXXXX, XXXXXXX
                                       //`--------------------------'  `--------------------------'
