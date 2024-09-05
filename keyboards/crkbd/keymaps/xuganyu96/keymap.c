@@ -30,6 +30,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VOL_UP KC_KB_VOLUME_UP
 #define VOL_DOWN KC_KB_VOLUME_DOWN
 #define MUTE KC_KB_MUTE
+#define ENT_MO1 LT(1, KC_ENT)
+#define OSM_RSFT OSM(MOD_RSFT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
@@ -40,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_NO,  KC_SPC, KC_LSFT,     MO(1),   KC_ENT,   KC_NO
+                                            KC_NO, XXXXXXX,  KC_SPC,    ENT_MO1,OSM_RSFT,   KC_NO
                                       //`--------------------------'  `--------------------------'
 
   ),
