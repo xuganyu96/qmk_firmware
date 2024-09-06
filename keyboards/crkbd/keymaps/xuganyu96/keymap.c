@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define K_OPT ROPT_T(KC_K)
 #define L_CTL RCTL_T(KC_L)
 #define CMD_4 RCMD_T(KC_4)
+#define OPT_5 ROPT_T(KC_5)
 #define CTL_6 RCTL_T(KC_6)
 #define VOL_UP KC_KB_VOLUME_UP
 #define VOL_DOWN KC_KB_VOLUME_DOWN
@@ -42,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_NO, XXXXXXX,  KC_SPC,    ENT_MO1,OSM_RSFT,   KC_NO
+                                            KC_NO,  KC_SPC,  KC_ESC,   OSM_RSFT, ENT_MO1,   KC_NO
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -51,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______,   KC_NO,  KC_GRV, KC_LBRC, KC_RBRC,   KC_NO,                       KC_EQL,    KC_7,    KC_8,    KC_9, KC_BSLS, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______,  KC_TAB, KC_BSPC, KC_LPRN, KC_RPRN, XXXXXXX,                     KC_MINUS,   CMD_4,    KC_5,   CTL_6, KC_QUOT, _______,
+      _______,  KC_TAB, KC_BSPC, KC_LPRN, KC_RPRN, XXXXXXX,                     KC_MINUS,   CMD_4,   OPT_5,   CTL_6, KC_QUOT, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, KC_LSFT, XXXXXXX, KC_LABK, KC_RABK,  KC_DOT,                         KC_0,    KC_1,    KC_2,    KC_3, KC_RSFT, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
