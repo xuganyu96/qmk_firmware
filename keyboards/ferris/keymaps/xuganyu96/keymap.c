@@ -59,5 +59,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 #endif // defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
 
 
-
-
+const uint16_t PROGMEM kc_we[] = {KC_W, KC_E, COMBO_END};
+combo_t key_combos[] = {
+    COMBO(kc_we, KC_ESC),
+};
