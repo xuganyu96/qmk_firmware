@@ -63,7 +63,7 @@ const uint16_t PROGMEM kc_we[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM kc_io[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM kc_xc[] = {KC_X, KC_C, COMBO_END};
 combo_t key_combos[] = {
-    COMBO(kc_we, KC_ESC),
-    COMBO(kc_io, KC_BSPC),
-    COMBO(kc_xc, KC_TAB),
+    // COMBO(kc_we, KC_ESC),
+    // COMBO(kc_io, KC_BSPC),
+    // COMBO(kc_xc, KC_TAB),
 };
