@@ -12,7 +12,6 @@
 #define CTL_L RCTL_T(KC_L)
 #define OSMLSFT OSM(MOD_LSFT)
 #define OSMRSFT OSM(MOD_RSFT)
-#define OSMLCTL OSM(MOD_LCTL)
 #define LT1_ENT LT(1, KC_ENT)
 #define CMD_4 RGUI_T(KC_4)
 #define ALT_5 RALT_T(KC_5)
@@ -23,9 +22,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // base layer
     [0] = LAYOUT_split_3x5_2(
         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-        KC_A,     KC_S,    ALT_D,    CMD_F,  SUPER_G,               KC_H,    CMD_J,    ALT_K,     KC_L,  KC_SCLN,
+        KC_A,    CTL_S,    ALT_D,    CMD_F,  SUPER_G,               KC_H,    CMD_J,    ALT_K,    CTL_L,  KC_SCLN,
         KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,               KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,
-                                    KC_SPC,  OSMLCTL,            OSMLSFT,  LT1_ENT
+                                    KC_SPC,   KC_ESC,            OSMLSFT,  LT1_ENT
     ),
 
     // symbols and numbers
