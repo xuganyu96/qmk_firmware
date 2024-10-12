@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_WH_U,  KC_BTN1, KC_MS_U,  KC_BTN2,  XXXXXXX,            XXXXXXX,  KC_VOLD, KC_VOLU,   KC_MUTE,  KC_BSPC,
       KC_WH_D,  KC_MS_L, KC_MS_D,  KC_MS_R,  XXXXXXX,            KC_LEFT,  KC_DOWN,   KC_UP,   KC_RGHT,   KC_TAB,
       KC_LSFT,  KC_LCTL, KC_LALT,  KC_LGUI,  XXXXXXX,            XXXXXXX,  KC_MPRV, KC_MPLY,   KC_MNXT,  KC_RSFT,
-                                     TO(0),    TO(3),            XXXXXXX,  XXXXXXX
+                                     TO(0),    TO(3),            KC_TRNS,  KC_TRNS
     ),
 
     // board configuration
