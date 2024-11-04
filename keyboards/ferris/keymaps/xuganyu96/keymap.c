@@ -4,6 +4,7 @@
 #endif
 
 #define CTL_S LCTL_T(KC_S)
+#define CTL_ESC LCTL_T(KC_ESC)
 #define ALT_D LALT_T(KC_D)
 #define CMD_F LGUI_T(KC_F)
 #define SUPER_G ALL_T(KC_G)
@@ -22,9 +23,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // base layer
     [0] = LAYOUT_split_3x5_2(
         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-        KC_A,    CTL_S,    ALT_D,    CMD_F,  SUPER_G,               KC_H,    CMD_J,    ALT_K,    CTL_L,  KC_SCLN,
+        KC_A,     KC_S,     KC_D,    CMD_F,  SUPER_G,               KC_H,    CMD_J,     KC_K,     KC_L,  KC_SCLN,
         KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,               KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,
-                                    KC_SPC,   KC_ESC,            OSMLSFT,  LT1_ENT
+                                    KC_SPC,  CTL_ESC,            OSMLSFT,  LT1_ENT
     ),
 
     // symbols and numbers
