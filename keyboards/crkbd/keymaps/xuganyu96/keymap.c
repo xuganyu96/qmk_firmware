@@ -32,56 +32,45 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VOL_DOWN KC_KB_VOLUME_DOWN
 #define MUTE KC_KB_MUTE
 #define ENT_MO1 LT(1, KC_ENT)
-#define OSM_RSFT OSM(MOD_RSFT)
-#define OSM_LSFT OSM(MOD_LSFT)
+#define OSMRSFT OSM(MOD_RSFT)
+#define OSMLSFT OSM(MOD_LSFT)
+#define RSFTQUOT RSFT_T(KC_QUOT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSLS,
+      XXXXXXX,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_BSPC,    KC_A,   S_CTL,   D_OPT,   F_CMD, HYPER_G,                         KC_H,   J_CMD,   K_OPT,   L_CTL, KC_SCLN, KC_QUOT,
+      XXXXXXX,    KC_A,   S_CTL,   D_OPT,   F_CMD, HYPER_G,                         KC_H,   J_CMD,   K_OPT,   L_CTL, KC_SCLN, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,
+      XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_NO,  KC_SPC,  KC_ESC,   OSM_LSFT, ENT_MO1,   KC_NO
+                                          XXXXXXX,  KC_SPC,  KC_TAB,    OSMLSFT, ENT_MO1, XXXXXXX
                                       //`--------------------------'  `--------------------------'
 
   ),
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______,   KC_NO,  KC_GRV, KC_LBRC, KC_RBRC,   KC_NO,                       KC_EQL,    KC_7,    KC_8,    KC_9, KC_BSLS, _______,
+      XXXXXXX,  KC_ESC,  KC_GRV, KC_LBRC, KC_RBRC, XXXXXXX,                       KC_EQL,    KC_7,    KC_8,    KC_9, KC_BSLS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______,  KC_TAB, KC_BSPC, KC_LPRN, KC_RPRN, XXXXXXX,                     KC_MINUS,   CMD_4,   OPT_5,   CTL_6, KC_QUOT, _______,
+      XXXXXXX, OSMLSFT, KC_BSPC, KC_LPRN, KC_RPRN, XXXXXXX,                     KC_MINUS,   CMD_4,   OPT_5,   CTL_6,RSFTQUOT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______,OSM_LSFT, XXXXXXX, KC_LABK, KC_RABK,  KC_DOT,                         KC_0,    KC_1,    KC_2,    KC_3,OSM_LSFT, _______,
+      XXXXXXX, XXXXXXX, XXXXXXX, KC_LABK, KC_RABK,  KC_DOT,                         KC_0,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_NO, _______,  TO(2),     _______, _______,   KC_NO
+                                          XXXXXXX, _______,  MO(2),     _______, _______, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, MS_WHLU, MS_BTN1,   MS_UP, MS_BTN2, XXXXXXX,                      XXXXXXX,VOL_DOWN,  VOL_UP,    MUTE, KC_BSPC, XXXXXXX,
+      XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX,VOL_DOWN,  VOL_UP,    MUTE, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT,  KC_TAB, XXXXXXX,
+      XXXXXXX, KC_LSFT, KC_LCTL, KC_LOPT, KC_LCMD, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LSFT, KC_LCTL, KC_LOPT, KC_LCMD, XXXXXXX,                      XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, KC_RSFT, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,   TO(0),   TO(3),    _______, _______, XXXXXXX
-                                      //`--------------------------'  `--------------------------'
-  ),
-
-    [3] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, RGB_SPI, RGB_VAI,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_MOD, RGB_TOG,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_SPD, RGB_VAD,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,   TO(0), XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX
+                                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   )
 };
@@ -101,9 +90,6 @@ bool oled_task_user(void) {
             break;
         case 2:
             oled_write_P(PSTR("Mouse\n"), false);
-            break;
-        case 3:
-            oled_write_P(PSTR("Board\n"), false);
     }
 
     // Host Keyboard LED Status
