@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
         KC_A,    CTL_S,    ALT_D,    CMD_F,  SUPER_G,               KC_H,    CMD_J,    ALT_K,    CTL_L,  KC_SCLN,
         KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,               KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,
-                                    KC_SPC,   KC_TAB,            OSMLSFT,  LT1_ENT
+                                    KC_SPC,  LT2_TAB,            OSMLSFT,  LT1_ENT
     ),
 
     /** Symbols and numbers
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_ESC,   KC_GRV, KC_LBRC,  KC_RBRC,  XXXXXXX,             KC_EQL,     KC_7,     KC_8,     KC_9,  KC_BSLS,
       OSMLSFT,  KC_BSPC, KC_LPRN,  KC_RPRN,  XXXXXXX,            KC_MINS,    CMD_4,    ALT_5,    CTL_6, RSFTQUOT,
       XXXXXXX,  XXXXXXX,   KC_LT,    KC_GT,   KC_DOT,               KC_0,     KC_1,     KC_2,     KC_3,  XXXXXXX,
-                                   KC_TRNS,    MO(2),            KC_TRNS,  KC_TRNS
+                                   KC_TRNS,  KC_TRNS,            KC_TRNS,  KC_TRNS
     ),
 
     /** Navigation and reset
