@@ -19,6 +19,7 @@
 #define LSFTTAB LSFT_T(KC_TAB)
 #define RSFTQUOT RSFT_T(KC_QUOT)
 #define LT2_TAB LT(2, KC_TAB)
+#define LT3_DOT LT(3, KC_DOT)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -27,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x5_2(
         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
         KC_A,    CTL_S,    ALT_D,    CMD_F,  SUPER_G,               KC_H,    CMD_J,    ALT_K,    CTL_L,  KC_SCLN,
-        KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,               KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,
+        KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,               KC_N,     KC_M,  KC_COMM,  LT3_DOT,  KC_SLSH,
                                     KC_SPC,  LT2_TAB,            OSMLSFT,  LT1_ENT
     ),
 
@@ -47,6 +48,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_LSFT,  KC_LCTL, KC_LALT,  KC_LGUI,  XXXXXXX,            KC_LEFT,  KC_DOWN,   KC_UP,   KC_RGHT,  XXXXXXX,
       XXXXXXX,  XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,            XXXXXXX,  XXXXXXX, XXXXXXX,   XXXXXXX,  XXXXXXX,
                                    XXXXXXX,  XXXXXXX,            KC_TRNS,  KC_TRNS
+    ),
+
+    /** Mouse
+    */
+    [3] = LAYOUT_split_3x5_2(
+      XXXXXXX,  KC_BTN1, KC_MS_U,  KC_BTN2,  KC_WH_U,            XXXXXXX,  XXXXXXX, XXXXXXX,   XXXXXXX,  XXXXXXX,
+      XXXXXXX,  KC_MS_L, KC_MS_D,  KC_MS_R,  KC_WH_D,            XXXXXXX,  XXXXXXX, XXXXXXX,   XXXXXXX,  XXXXXXX,
+      XXXXXXX,  XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,            XXXXXXX,  XXXXXXX, XXXXXXX,   XXXXXXX,  XXXXXXX,
+                                   XXXXXXX,  XXXXXXX,            XXXXXXX,  XXXXXXX
     )
 };
 
