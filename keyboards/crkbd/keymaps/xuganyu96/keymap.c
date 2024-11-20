@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VOL_DOWN KC_KB_VOLUME_DOWN
 #define MUTE KC_KB_MUTE
 #define LT1ENT LT(1, KC_ENT)
+#define LT1SPC LT(1, KC_SPC)
 #define LT2TAB LT(2, KC_TAB)
 #define LT3DOT LT(3, KC_DOT)
 #define OSMRSFT OSM(MOD_RSFT)
@@ -47,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  LT3DOT, KC_SLSH, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,  KC_SPC,  LT2TAB,    OSMLSFT,  LT1ENT, XXXXXXX
+                                          XXXXXXX,  LT1ENT,  LT2TAB,    OSMLSFT,  LT1SPC, XXXXXXX
                                       //`--------------------------'  `--------------------------'
 
   ),

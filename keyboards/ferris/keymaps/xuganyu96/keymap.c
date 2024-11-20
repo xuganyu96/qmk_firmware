@@ -12,7 +12,8 @@
 #define CTL_L RCTL_T(KC_L)
 #define OSMLSFT OSM(MOD_LSFT)
 #define OSMRSFT OSM(MOD_RSFT)
-#define LT1_ENT LT(1, KC_ENT)
+#define LT1ENT LT(1, KC_ENT)
+#define LT1SPC LT(1, KC_SPC)
 #define CMD_4 RGUI_T(KC_4)
 #define ALT_5 RALT_T(KC_5)
 #define CTL_6 RCTL_T(KC_6)
@@ -29,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
         KC_A,    CTL_S,    ALT_D,    CMD_F,  SUPER_G,               KC_H,    CMD_J,    ALT_K,    CTL_L,  KC_SCLN,
         KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,               KC_N,     KC_M,  KC_COMM,  LT3_DOT,  KC_SLSH,
-                                    KC_SPC,  LT2_TAB,            OSMLSFT,  LT1_ENT
+                                    LT1ENT,  LT2_TAB,            OSMLSFT,   LT1SPC
     ),
 
     /** Symbols and numbers
